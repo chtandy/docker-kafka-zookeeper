@@ -17,9 +17,9 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_BROKER_ID: "1"
       KAFKA_DELETE_TOPIC_ENABLE: "true"
-      KAFKA_LOG_DIRS: /opt/kafka/volume/data
+      KAFKA_LOG_DIRS: /opt/kafka/data
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       KAFKA_LOG_RETENTION_HOURS: "72"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./data:/opt/kafka/volume
+      - ./data:/opt/kafka/data
